@@ -4,6 +4,8 @@ import styled, {
   injectGlobal,
 } from 'styled-components';
 
+import HueBridge from './assets/HueBridge';
+
 injectGlobal`
   html, body {
     height: 100%;
@@ -15,12 +17,23 @@ injectGlobal`
 `
 const Wrapper = styled.section`
   padding: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const Title = styled.h1`
+  padding-bottom: 4em;
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
+`;
+
+const HeroImg = styled.div`
+  width: 360px;
+  height: 360px;
+  fill: palevioletred;
 `;
 
 class App extends Component {
@@ -28,8 +41,11 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>
-          Hue R U?
+          HueRU
         </Title>
+        <HeroImg>
+          <HueBridge />
+        </HeroImg>
       </Wrapper>
     );
   }
