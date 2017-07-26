@@ -18,7 +18,7 @@ class App extends Component {
         <Title title={APP_NAME} />
         <HeroPulseImage />
         <BridgeIPInput />
-        <Toast message="Test!"/>
+        <Toast message="TEst!"/>
       </Wrapper>
     );
   }

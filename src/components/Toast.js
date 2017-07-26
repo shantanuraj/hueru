@@ -29,9 +29,12 @@ const ToastMessage = styled.p`
 `;
 
 export default ({message}) => (
+  message ?
   <ToastBox>
     <ToastMessage>
       {message}
     </ToastMessage>
   </ToastBox>
+  :
+  null
 )
