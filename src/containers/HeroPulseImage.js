@@ -8,9 +8,26 @@ import {
 
 import HeroImg from '../components/HeroImg';
 
-const mapState = state => ({
-  isActive: !!state.bridgeInput.ip,
-});
+export const NOT_FINDING = 'NOT_FINDING';
+export const FINDING = 'FINDING';
+export const FOUND = 'FOUND';
+
+const mapState = state => {
+  const {
+    found,
+    ip,
+  } = state.bridgeFinder;
+
+  let status = NOT_FINDING;
+
+  if (!found && ip) {
+    status = FINDING;
+  } else if (found) {
+    status = FOUND;
+  }
+
+  return { status };
+}
 
 const HeroPulseImage = connect(
   mapState,

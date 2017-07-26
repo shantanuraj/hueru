@@ -1,14 +1,9 @@
 /**
  * Color cycle animation helper
  */
-
-import {
-  COLOR_CYCLE,
-} from '../config/colors';
-
-const getPulseAnimation = () => {
-  const length = COLOR_CYCLE.length - 1;
-  return COLOR_CYCLE
+const getPulseAnimation = (colors) => {
+  const length = colors.length - 1;
+  return colors
     .map((color, i) => `
     ${Math.floor(i / length * 100)}% {
       fill: ${color};

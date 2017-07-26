@@ -28,13 +28,21 @@ export const COLOR_SECONDARY = `#00C8FF`;
 export const COLOR_TOAST = '#DA70D6';
 
 /**
- * Color pulse cycle
+ * Color pulse cycle when finding
  */
-export const COLOR_CYCLE = [
+export const FINDING_COLORS = [
   `palevioletred`,
   `orangered`,
   `gold`,
   `mediumorchid`,
   `seagreen`,
   `steelblue`,
+];
+
+/**
+ * Color pulse cycle when found
+ */
+export const FOUND_COLORS = [
+  `cyan`,
+  `mediumturquoise`,
 ];

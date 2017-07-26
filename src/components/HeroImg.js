@@ -7,25 +7,40 @@ import styled, {
   keyframes,
 } from 'styled-components';
 import {
-  COLOR_PRIMARY
+  FINDING_COLORS,
+  FOUND_COLORS,
+  COLOR_PRIMARY,
 } from '../config/colors';
 import getPulseAnimation from '../utils/color-cycle';
 import HueBridge from '../assets/HueBridge';
 
-const pulse = keyframes`${getPulseAnimation()}`;
+import {
+  NOT_FINDING,
+  FINDING,
+  FOUND,
+} from '../containers/HeroPulseImage';
+
+const getAnimationForState = (state) => {
+  switch (state) {
+    case FINDING:
+      return `animation: ${keyframes`${getPulseAnimation(FINDING_COLORS)}`} 4s infinite;`;
+    case FOUND:
+      return `animation: ${keyframes`${getPulseAnimation(FOUND_COLORS)}`} 2s infinite;`;
+    default:
+      return ``;
+  }
+}
 
 const HeroImg = styled.div`
-  ${({ isActive }) => isActive ? `animation: ${pulse} 4s infinite;` : ''}
+  ${({status}) => getAnimationForState(status)}
   fill: ${COLOR_PRIMARY};
   width: 20em;
   height: 20em;
   padding: 4em;
 `;
 
-export default ({
-  isActive,
-}) => (
-  <HeroImg isActive={isActive}>
+export default ({ status }) => (
+  <HeroImg status={status}>
     <HueBridge />
   </HeroImg>
 );
