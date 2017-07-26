@@ -2,13 +2,15 @@
  * IP Input component
  */
 
+import React from 'react';
 import styled from 'styled-components';
 import {
   COLOR_PRIMARY
 } from '../config/colors';
 
 const IPInput = styled.input`
-  width: 360px;
+  width: 15em;
+  font-size: 1.5em;
   text-align: center;
   padding: 0.5em;
   margin: 0.5em;
@@ -19,4 +21,6 @@ const IPInput = styled.input`
   border-radius: 3px;
 `;
 
-export default IPInput;
+export default () => (
+  <IPInput placeholder="Enter bridge IP to continue" />
+);

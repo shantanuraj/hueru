@@ -10,8 +10,8 @@ import {
 import HueBridge from '../assets/HueBridge';
 
 const HeroImg = styled.div`
-  width: 360px;
-  height: 360px;
+  width: 20em;
+  height: 20em;
   fill: ${COLOR_PRIMARY};
   padding: 4em;
 `;
