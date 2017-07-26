@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
+  Provider,
+} from 'react-redux';
+import {
   injectGlobal,
 } from 'styled-components';
 
@@ -9,6 +12,7 @@ import {
   LIGHT_BACKGROUND,
 } from './config/colors';
 import registerServiceWorker from './registerServiceWorker';
+import store from './store';
 
 // eslint-disable-next-line
 injectGlobal`
@@ -21,5 +25,11 @@ injectGlobal`
   }
 `;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const HueRU = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+ReactDOM.render(<HueRU />, document.getElementById('root'));
 registerServiceWorker();
