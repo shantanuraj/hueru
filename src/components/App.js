@@ -6,8 +6,8 @@ import {
 
 import BridgeIPInput from '../containers/BridgeIPInput';
 import HeroPulseImage from '../containers/HeroPulseImage';
+import ToastContainer from '../containers/Toast';
 
-import Toast from './Toast';
 import Title from './Title';
 import Wrapper from './Wrapper';
 
@@ -18,7 +18,7 @@ class App extends Component {
         <Title title={APP_NAME} />
         <HeroPulseImage />
         <BridgeIPInput />
-        <Toast message="TEst!"/>
+        <ToastContainer />
       </Wrapper>
     );
   }

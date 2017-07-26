@@ -19,3 +19,8 @@ export const expectedResponse = [
       }
   }
 ];
+
+/**
+ * Toast duration
+ */
+export const TOAST_DURATION = 2000;
