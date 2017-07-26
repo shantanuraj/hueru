@@ -21,6 +21,13 @@ const IPInput = styled.input`
   border-radius: 3px;
 `;
 
-export default () => (
-  <IPInput placeholder="Enter bridge IP to continue" />
+export default ({
+  ip,
+  onChange,
+}) => (
+  <IPInput
+    value={ip}
+    onChange={e => onChange(e.target.value)}
+    placeholder="Enter bridge IP to continue"
+  />
 );
