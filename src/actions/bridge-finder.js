@@ -4,9 +4,14 @@
 
 import isEqual from 'lodash.isequal';
 
- import {
+import {
   expectedResponse,
+  CONNECT_MESSAGE,
 } from '../config/constants';
+
+import {
+  displayToast,
+} from './toast';
 
 const isFound = response => isEqual(response, expectedResponse);
 
@@ -43,8 +48,12 @@ export const lookupBridge = (ip) => {
     fetch(`http://${ip}/api`)
       .then(res => res.json())
       .then(isFound)
-      .then(result)
-      .then(dispatch)
+      .then(found => {
+        dispatch(result(found));
+        if (found) {
+          dispatch(displayToast(CONNECT_MESSAGE));
+        }
+      })
       .catch(() => dispatch(result(false)));
   };
 }

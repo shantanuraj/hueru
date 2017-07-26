@@ -14,7 +14,7 @@ const toast = (state = {
     case SHOW_TOAST:
       return { ...state, message: action.message };
     case HIDE_TOAST:
-      if (action.message == state.message) {
+      if (action.message === state.message) {
         return { ...state, message: '' };
       }
       return state;

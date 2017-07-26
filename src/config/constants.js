@@ -24,3 +24,8 @@ export const expectedResponse = [
  * Toast duration
  */
 export const TOAST_DURATION = 2000;
+
+/**
+ * Connect message
+ */
+export const CONNECT_MESSAGE = 'Press button on hue bridge!';

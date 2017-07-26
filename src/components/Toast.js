@@ -9,7 +9,6 @@ import {
 const ToastBox = styled.div`
   background-color: ${COLOR_SECONDARY};
   height: 2em;
-  width: 5em;
   text-align: center;
   border-radius: 0.5em;
   padding: 0.5em;
