@@ -16,4 +16,8 @@ const Title = styled.h1`
   color: ${COLOR_PRIMARY};
 `;
 
-export default Title;
+export default ({title}) => (
+  <Title>
+    {title}
+  </Title>
+);
