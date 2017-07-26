@@ -7,7 +7,7 @@ import {
 } from 'react-redux';
 
 import {
-  bridgeIPChange,
+  onBridgeIPChange,
 } from '../actions/bridge-input';
 
 import IPInput from '../components/IPInput';
@@ -15,7 +15,7 @@ import IPInput from '../components/IPInput';
 const mapState = state => state.bridgeInput;
 
 const mapDispatch = (dispatch) => ({
-  onChange: ip => dispatch(bridgeIPChange(ip)),
+  onChange: ip => dispatch(onBridgeIPChange(ip)),
 });
 
 const BridgeIPInput = connect(
