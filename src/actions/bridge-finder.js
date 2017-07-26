@@ -29,19 +29,22 @@ export const BRIDGE_FOUND_RESULT = 'BRIDGE_FOUND_RESULT';
  * Action for when bridge is found or not found
  * @param {boolean} found
  */
-const bridgeFoundResult = (found) => ({
+const bridgeFoundResult = (found, ip) => ({
   found,
+  ip,
   type: BRIDGE_FOUND_RESULT,
 });
 
 export const lookupBridge = (ip) => {
   return dispatch => {
+    const result = (found) => bridgeFoundResult(found, ip);
+
     dispatch(findBridge(ip));
     fetch(`http://${ip}/api`)
       .then(res => res.json())
       .then(isFound)
-      .then(bridgeFoundResult)
+      .then(result)
       .then(dispatch)
-      .catch(() => dispatch(bridgeFoundResult(false)));
+      .catch(() => dispatch(result(false)));
   };
 }
