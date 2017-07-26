@@ -5,8 +5,8 @@ import {
 } from '../config/constants';
 
 import BridgeIPInput from '../containers/BridgeIPInput';
+import HeroPulseImage from '../containers/HeroPulseImage';
 
-import HeroImg from './HeroImg';
 import Title from './Title';
 import Wrapper from './Wrapper';
 
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title title={APP_NAME} />
-        <HeroImg />
+        <HeroPulseImage />
         <BridgeIPInput />
       </Wrapper>
     );
