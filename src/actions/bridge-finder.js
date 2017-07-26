@@ -13,6 +13,8 @@ import {
   displayToast,
 } from './toast';
 
+import Hue from '../api/hue';
+
 const isFound = response => isEqual(response, expectedResponse);
 
 /**
@@ -45,8 +47,7 @@ export const lookupBridge = (ip) => {
     const result = (found) => bridgeFoundResult(found, ip);
 
     dispatch(findBridge(ip));
-    fetch(`http://${ip}/api`)
-      .then(res => res.json())
+    new Hue(ip).authenticate()
       .then(isFound)
       .then(found => {
         dispatch(result(found));

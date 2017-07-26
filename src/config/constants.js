@@ -12,11 +12,11 @@ export const APP_NAME = 'HueRU';
  */
 export const expectedResponse = [
   {
-      "error": {
-          "address": "/",
-          "description": "method, GET, not available for resource, /",
-          "type": 4
-      }
+    "error": {
+      "type": 101,
+      "address": "/",
+      "description": "link button not pressed"
+    }
   }
 ];
 
