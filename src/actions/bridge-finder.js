@@ -10,6 +10,10 @@ import {
 } from '../config/constants';
 
 import {
+  initAuth,
+} from './bridge-auth';
+
+import {
   displayToast,
 } from './toast';
 
@@ -53,6 +57,7 @@ export const lookupBridge = (ip) => {
         dispatch(result(found));
         if (found) {
           dispatch(displayToast(CONNECT_MESSAGE));
+          dispatch(initAuth(ip, Date.now()));
         }
       })
       .catch(() => dispatch(result(false)));

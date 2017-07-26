@@ -29,3 +29,8 @@ export const TOAST_DURATION = 2000;
  * Connect message
  */
 export const CONNECT_MESSAGE = 'Bridge found press button on hue bridge!';
+
+/**
+ * 30 seconds
+ */
+export const THIRTY_SECONDS = 30 * 1000;
