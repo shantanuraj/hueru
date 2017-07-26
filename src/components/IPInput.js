@@ -2,9 +2,6 @@
  * IP Input component
  */
 
-'use strict';
-
-import React from 'react';
 import styled from 'styled-components';
 import {
   COLOR_PRIMARY

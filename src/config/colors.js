@@ -2,8 +2,6 @@
  * Color spec
  */
 
-'use strict';
-
 /**
  * Light background color
  */

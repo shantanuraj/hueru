@@ -2,9 +2,6 @@
  * Wrapper for entire app
  */
 
-'use strict';
-
-import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`

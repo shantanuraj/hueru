@@ -10,6 +10,7 @@ import {
 } from './config/colors';
 import registerServiceWorker from './registerServiceWorker';
 
+// eslint-disable-next-line
 injectGlobal`
   html, body {
     height: 100%;
@@ -18,7 +19,7 @@ injectGlobal`
     background: ${LIGHT_BACKGROUND};
     margin: 0;
   }
-`
+`;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
