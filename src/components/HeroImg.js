@@ -15,14 +15,17 @@ import HueBridge from '../assets/HueBridge';
 const pulse = keyframes`${getPulseAnimation()}`;
 
 const HeroImg = styled.div`
-  animation: ${pulse} 4s infinite;
+  ${({ isActive }) => isActive ? `animation: ${pulse} 4s infinite;` : ''}
+  fill: ${COLOR_PRIMARY};
   width: 20em;
   height: 20em;
   padding: 4em;
 `;
 
-export default () => (
-  <HeroImg>
+export default ({
+  isActive,
+}) => (
+  <HeroImg isActive={isActive}>
     <HueBridge />
   </HeroImg>
 );
