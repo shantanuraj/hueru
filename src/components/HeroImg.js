@@ -15,7 +15,6 @@ import getPulseAnimation from '../utils/color-cycle';
 import HueBridge from '../assets/HueBridge';
 
 import {
-  NOT_FINDING,
   FINDING,
   FOUND,
 } from '../containers/HeroPulseImage';

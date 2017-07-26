@@ -28,4 +28,4 @@ export const TOAST_DURATION = 2000;
 /**
  * Connect message
  */
-export const CONNECT_MESSAGE = 'Press button on hue bridge!';
+export const CONNECT_MESSAGE = 'Bridge found press button on hue bridge!';
