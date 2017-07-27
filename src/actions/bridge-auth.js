@@ -9,8 +9,12 @@ import {
 import extractToken from '../utils/extract-token';
 
 import {
-  saveToken
+  saveToken,
 } from './save-token';
+
+import {
+  findDevices,
+} from './hue';
 
 import Hue from '../api/hue';
 
@@ -60,6 +64,8 @@ export const initAuth = (ip, time) => {
           throw token;
         }
         dispatch(saveToken(token));
+        dispatch(findDevices(ip, token));
+        return token;
       })
       .then(authSuccess)
       .then(dispatch)
