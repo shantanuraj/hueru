@@ -60,7 +60,6 @@ export const initAuth = (ip, time) => {
           throw token;
         }
         dispatch(saveToken(token));
-        return token;
       })
       .then(authSuccess)
       .then(dispatch)
