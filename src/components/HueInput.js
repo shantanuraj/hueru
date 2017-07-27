@@ -22,7 +22,7 @@ const StyledInput = styled.input`
   border-radius: 3px;
 `;
 
-const handleChange = (cb, type) => event => cb(type, parseInt(event.target.value, 10));
+const handleChange = (cb, type) => event => cb(type, parseInt(event.target.value, 10) || 0);
 
 const HueInput = (props) => {
   const {
@@ -34,9 +34,9 @@ const HueInput = (props) => {
 
   return (
     <div>
-      <StyledInput onChange={handleChange(onChange, 'hue')} placeholder="Hue" value={hue} />
-      <StyledInput onChange={handleChange(onChange, 'sat')} placeholder="Saturation" value={sat} />
-      <StyledInput onChange={handleChange(onChange, 'bri')} placeholder="Brightness" value={bri} />
+      <StyledInput max="65535" onChange={handleChange(onChange, 'hue')} placeholder="Hue" value={hue} />
+      <StyledInput max="254" onChange={handleChange(onChange, 'sat')} placeholder="Saturation" value={sat} />
+      <StyledInput max="254" onChange={handleChange(onChange, 'bri')} placeholder="Brightness" value={bri} />
     </div>
   );
 };
