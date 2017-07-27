@@ -7,10 +7,11 @@ import HueInput from './HueInput';
 
 const Device = ({
   name,
+  state,
 }) => (
   <div>
     <p>{name}</p>
-    <HueInput />
+    <HueInput {...state} />
   </div>
 );
 
