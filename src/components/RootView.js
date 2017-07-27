@@ -13,12 +13,12 @@ import Title from './Title';
 import Wrapper from './Wrapper';
 
 const RootView = ({tokenSaved}) => (
-    <Wrapper>
-        <Title title={APP_NAME} />
-        <HeroPulseImage />
-        <BridgeIPInput />
-        <ToastContainer />
-      </Wrapper>
+  <Wrapper>
+    <Title title={APP_NAME} />
+    <HeroPulseImage />
+    <BridgeIPInput />
+    <ToastContainer />
+  </Wrapper>
 );
 
 export default RootView;

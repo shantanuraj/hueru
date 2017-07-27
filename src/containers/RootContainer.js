@@ -3,7 +3,7 @@
  */
 
 import {
-    connect
+  connect
 } from 'react-redux';
 
 import RootView from '../components/RootView';
@@ -11,7 +11,7 @@ import RootView from '../components/RootView';
 const mapState = state => state.saveToken;
 
 const RootContainer = connect(
-    mapState,
+  mapState,
 )(RootView);
 
 export default RootContainer;

@@ -3,22 +3,22 @@
  */
 
 import {
-    KEY_TOKEN,
+  KEY_TOKEN,
 } from '../config/constants'
 
 import {
-    STORE_TOKEN,
+  STORE_TOKEN,
 } from '../actions/save-token';
 
 const saveToken = (state = {
-    tokenSaved: !!localStorage.KEY_TOKEN,
+  tokenSaved: !!localStorage[KEY_TOKEN],
 }, action) => {
-    switch(action.type) {
-        case STORE_TOKEN:
-            return { ...state, tokenSaved: true };
-        default:
-            return state;
-    }
+  switch(action.type) {
+      case STORE_TOKEN:
+          return { ...state, tokenSaved: true };
+      default:
+          return state;
+  }
 }
 
 export default saveToken;
