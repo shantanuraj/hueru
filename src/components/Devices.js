@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-// import HueInput from './HueInput';
+import DeviceList from './DeviceList';
 
 const Devices = ({
   finding,
@@ -18,9 +18,7 @@ const Devices = ({
     );
   } else if (devices && devices.length > 0) {
     return (
-      <div>
-        {devices.map(device => <p>{device.id}</p>)}
-      </div>
+      <DeviceList devices={devices} />
     );
   } else if (devices && devices.length === 0) {
     return (
