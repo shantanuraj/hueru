@@ -8,10 +8,11 @@ import HueInput from './HueInput';
 const Device = ({
   name,
   state,
+  onChange,
 }) => (
   <div>
     <p>{name}</p>
-    <HueInput {...state} />
+    <HueInput onChange={onChange} {...state} />
   </div>
 );
 

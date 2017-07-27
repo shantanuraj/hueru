@@ -9,6 +9,7 @@ const Devices = ({
   finding,
   devices,
   findDevices,
+  onChange,
 }) => {
   if (finding) {
     return (
@@ -18,7 +19,7 @@ const Devices = ({
     );
   } else if (devices && devices.length > 0) {
     return (
-      <DeviceList devices={devices} />
+      <DeviceList onChange={onChange} devices={devices} />
     );
   } else if (devices && devices.length === 0) {
     return (

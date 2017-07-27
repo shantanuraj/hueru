@@ -22,6 +22,7 @@ const mapDispatch = (dispatch, {
   token,
 }) => ({
   findDevices: () => dispatch(findDevices(ip, token)),
+  onChange: id => (key, value) => console.log(id, key, value),
 });
 
 const DevicesContainer = connect(
