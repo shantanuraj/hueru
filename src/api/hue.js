@@ -8,9 +8,9 @@ import {
 } from '../config/constants';
 
 class Hue {
-  constructor(ip) {
+  constructor(ip, token) {
     this.net = axios.create({
-      baseURL: `http://${ip}/api/`,
+      baseURL: `http://${ip}/api/${ !!token ? token : '' }`,
     });
   }
 
@@ -19,6 +19,12 @@ class Hue {
       devicetype: APP_NAME,
     })
     .then(res => res.data);
+  }
+
+  getDevices() {
+    return this.net.get(`/lights`)
+    .then(res => res.data)
+    .catch(err => null);
   }
 }
 
