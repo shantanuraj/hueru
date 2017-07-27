@@ -8,6 +8,10 @@ import {
 
 import extractToken from '../utils/extract-token';
 
+import {
+  saveToken
+} from './save-token';
+
 import Hue from '../api/hue';
 
 /**
@@ -55,6 +59,7 @@ export const initAuth = (ip, time) => {
         if (!token) {
           throw token;
         }
+        dispatch(saveToken(token));
         return token;
       })
       .then(authSuccess)

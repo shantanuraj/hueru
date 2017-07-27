@@ -34,3 +34,8 @@ export const CONNECT_MESSAGE = 'Bridge found press button on hue bridge!';
  * 30 seconds
  */
 export const THIRTY_SECONDS = 30 * 1000;
+
+/**
+ * Local storage key for token
+ */
+export const KEY_TOKEN = 'KEY_TOKEN';
