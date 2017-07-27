@@ -10,7 +10,6 @@ import bridgeAuth from './bridge-auth';
 import bridgeFinder from './bridge-finder';
 import bridgeInput from './bridge-input';
 import hue from './hue';
-import saveToken from './save-token';
 import toast from './toast';
 
 const reducers = combineReducers({
@@ -18,7 +17,6 @@ const reducers = combineReducers({
   bridgeFinder,
   bridgeInput,
   hue,
-  saveToken,
   toast,
 });
 
