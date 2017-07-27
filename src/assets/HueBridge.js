@@ -6,11 +6,9 @@ export default () => (
     baseProfile="tiny"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns_xlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    viewBox="0 0 50 50"
-    xml_space="preserve">
+    viewBox="0 0 50 50">
   <g>
     <circle fill="none" cx="16.9" cy="21.7" r="0.6"/>
     <circle fill="none" cx="10.8" cy="21.7" r="0.6"/>

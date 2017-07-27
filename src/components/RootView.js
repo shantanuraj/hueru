@@ -11,10 +11,10 @@ import BridgeFinder from './BridgeFinder';
 import Title from './Title';
 import Wrapper from './Wrapper';
 
-const RootView = ({tokenSaved}) => (
+const RootView = ({ hasToken }) => (
   <Wrapper>
     <Title title={APP_NAME} />
-    { tokenSaved ? <Devices /> : <BridgeFinder /> }
+    { hasToken ? <Devices /> : <BridgeFinder /> }
     <ToastContainer />
   </Wrapper>
 );

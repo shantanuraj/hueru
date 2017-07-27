@@ -8,7 +8,9 @@ import {
 
 import RootView from '../components/RootView';
 
-const mapState = state => state.saveToken;
+const mapState = state => ({
+  hasToken: !!state.bridgeAuth.token,
+});
 
 const RootContainer = connect(
   mapState,
