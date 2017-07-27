@@ -28,6 +28,10 @@ class Hue {
     .then(adaptDevices)
     .catch(err => null);
   }
+
+  setState(id, state) {
+    return this.net.put(`/lights/${id}`, state);
+  }
 }
 
 export default Hue;
