@@ -11,11 +11,11 @@ import {
 } from '../actions/save-token';
 
 const saveToken = (state = {
-    tokenSaved: localStorage.KEY_TOKEN,
+    tokenSaved: !!localStorage.KEY_TOKEN,
 }, action) => {
     switch(action.type) {
         case STORE_TOKEN:
-            return { ...state, tokenSaved: true};
+            return { ...state, tokenSaved: true };
         default:
             return state;
     }

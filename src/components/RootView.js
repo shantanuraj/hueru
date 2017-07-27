@@ -14,7 +14,6 @@ import Wrapper from './Wrapper';
 
 const RootView = ({tokenSaved}) => (
     <Wrapper>
-      {console.log(tokenSaved)}
         <Title title={APP_NAME} />
         <HeroPulseImage />
         <BridgeIPInput />
