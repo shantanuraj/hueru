@@ -9,10 +9,12 @@ import {
   findDevices,
 } from '../actions/hue';
 
+import adaptDevices from '../utils/adapt-devices';
 import Devices from '../components/Devices';
 
 const mapState = state => ({
   ...state.hue,
+  devices: state.hue.devices === null ? null : adaptDevices(state.hue.device),
   ip: state.bridgeFinder.ip,
   token: state.bridgeAuth.token,
 });

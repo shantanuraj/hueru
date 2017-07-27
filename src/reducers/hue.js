@@ -3,6 +3,7 @@
  */
 
 import {
+  DEVICE_STATE_CHANGE,
   DEVICES_FOUND,
   DEVICES_NOT_FOUND,
   GET_DEVICES,
@@ -18,7 +19,21 @@ const hue = (state = {
     case DEVICES_FOUND:
       return { ...state, finding: false, devices: action.devices };
     case DEVICES_NOT_FOUND:
-      return { ...state, finding: false, devices: [] };
+      return { ...state, finding: false, devices: {} };
+    case DEVICE_STATE_CHANGE:
+      return {
+        ...state,
+        devices: {
+          ...state.devices,
+          [action.deviceId]: {
+            ...state.devices[action.deviceId],
+            state: {
+              ...state.devices[action.deviceId].state,
+              [action.key]: action.value,
+            }
+          }
+        }
+      };
     default:
       return state;
   }

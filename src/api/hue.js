@@ -6,7 +6,6 @@ import axios from 'axios';
 import {
   APP_NAME,
 } from '../config/constants';
-import adaptDevices from '../utils/adapt-devices';
 
 class Hue {
   constructor(ip, token) {
@@ -25,7 +24,6 @@ class Hue {
   getDevices() {
     return this.net.get(`/lights`)
     .then(res => res.data)
-    .then(adaptDevices)
     .catch(err => null);
   }
 

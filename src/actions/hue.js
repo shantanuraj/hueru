@@ -52,3 +52,35 @@ export const findDevices = (ip, token) => {
     });
   };
 };
+
+/**
+ * Action for state change
+ */
+export const DEVICE_STATE_CHANGE = 'DEVICE_STATE_CHANGE';
+
+const deviceStateChange = (deviceId, key, value) => ({
+  type: DEVICE_STATE_CHANGE,
+  deviceId,
+  key,
+  value,
+});
+
+/**
+ * Action for device change status
+ */
+const DEVICE_CHANGE_STATUS = 'DEVICE_CHANGE_STATUS';
+
+const deviceChangeStatus = success => ({
+  type: DEVICE_CHANGE_STATUS,
+  success,
+});
+
+export const changeDeviceState = (ip, token, deviceId, key, value) => {
+  const hue = new Hue(ip, token);
+  return dispatch => {
+    dispatch(deviceStateChange(deviceId, key, value));
+    hue.setState(deviceId, { [key]: value })
+      .then(() => dispatch(deviceChangeStatus(true)))
+      .catch(() => dispatch(deviceChangeStatus(false)));
+  };
+};
