@@ -12,8 +12,9 @@ import ToastContainer from '../containers/Toast';
 import Title from './Title';
 import Wrapper from './Wrapper';
 
-const RootContainer = () => (
+const RootView = ({tokenSaved}) => (
     <Wrapper>
+      {console.log(tokenSaved)}
         <Title title={APP_NAME} />
         <HeroPulseImage />
         <BridgeIPInput />
@@ -21,4 +22,4 @@ const RootContainer = () => (
       </Wrapper>
 );
 
-export default RootContainer;
+export default RootView;

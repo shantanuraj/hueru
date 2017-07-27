@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import RootContainer from './RootContainer';
+import RootContainer from '../containers/RootContainer';
 
 class App extends Component {
   render() {
