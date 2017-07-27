@@ -3,12 +3,11 @@
  */
 
 import React from 'react';
+import HueInput from './HueInput';
 
 const Devices = () => (
   <div>
-    <p>
-      Devices...
-    </p>
+    <HueInput />
   </div>
 );
 
