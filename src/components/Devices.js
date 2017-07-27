@@ -6,6 +6,8 @@ import React from 'react';
 import DeviceList from './DeviceList';
 
 const Devices = ({
+  ip,
+  token,
   finding,
   devices,
   findDevices,
@@ -19,7 +21,7 @@ const Devices = ({
     );
   } else if (devices && devices.length > 0) {
     return (
-      <DeviceList onChange={onChange} devices={devices} />
+      <DeviceList onChange={onChange(ip, token)} devices={devices} />
     );
   } else if (devices && devices.length === 0) {
     return (

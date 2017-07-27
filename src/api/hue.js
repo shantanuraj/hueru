@@ -28,7 +28,7 @@ class Hue {
   }
 
   setState(id, state) {
-    return this.net.put(`/lights/${id}`, state);
+    return this.net.put(`/lights/${id}/state`, state);
   }
 }
 

@@ -22,7 +22,7 @@ const StyledInput = styled.input`
   border-radius: 3px;
 `;
 
-const handleChange = (cb, type) => event => cb(type, event.target.value);
+const handleChange = (cb, type) => event => cb(type, parseInt(event.target.value, 10));
 
 const HueInput = (props) => {
   const {
