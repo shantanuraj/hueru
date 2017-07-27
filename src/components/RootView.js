@@ -4,19 +4,17 @@ import {
   APP_NAME,
 } from '../config/constants';
 
-
-import BridgeIPInput from '../containers/BridgeIPInput';
-import HeroPulseImage from '../containers/HeroPulseImage';
 import ToastContainer from '../containers/Toast';
 
+import BridgeFinder from './BridgeFinder';
+import Devices from './Devices';
 import Title from './Title';
 import Wrapper from './Wrapper';
 
 const RootView = ({tokenSaved}) => (
   <Wrapper>
     <Title title={APP_NAME} />
-    <HeroPulseImage />
-    <BridgeIPInput />
+    { tokenSaved ? <Devices /> : <BridgeFinder /> }
     <ToastContainer />
   </Wrapper>
 );

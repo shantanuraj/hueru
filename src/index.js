@@ -7,7 +7,7 @@ import {
   injectGlobal,
 } from 'styled-components';
 
-import App from './components/App';
+import RootContainer from './containers/RootContainer';
 import {
   LIGHT_BACKGROUND,
 } from './config/colors';
@@ -27,7 +27,7 @@ injectGlobal`
 
 const HueRU = () => (
   <Provider store={store}>
-    <App />
+    <RootContainer />
   </Provider>
 );
 
