@@ -4,10 +4,10 @@ import {
   APP_NAME,
 } from '../config/constants';
 
+import Devices from '../containers/Devices';
 import ToastContainer from '../containers/Toast';
 
 import BridgeFinder from './BridgeFinder';
-import Devices from './Devices';
 import Title from './Title';
 import Wrapper from './Wrapper';
 

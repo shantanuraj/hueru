@@ -9,7 +9,7 @@ import {
 } from '../actions/hue';
 
 const hue = (state = {
-  devices: {},
+  devices: null,
   finding: false,
 }, action) => {
   switch (action.type) {
@@ -18,7 +18,7 @@ const hue = (state = {
     case DEVICES_FOUND:
       return { ...state, finding: false, devices: action.devices };
     case DEVICES_NOT_FOUND:
-      return { ...state, finding: false };
+      return { ...state, finding: false, devices: [] };
     default:
       return state;
   }
